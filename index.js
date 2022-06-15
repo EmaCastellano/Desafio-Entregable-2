@@ -6,11 +6,10 @@ class Servicio {
         this.precio = precio;
     }
 }
-
 const servicios = [
-    new Servicio('Empresarial/Remis', 60, 'auto', 1000),
-    new Servicio('Mudanza/Traslado de mercaderia', 135, 'camion', 2500),
-    new Servicio('Traslado de materia prima al interior', 600, 'camion y acoplado', 5000)
+    new Servicio('Remis', 60, 'auto', 1000),
+    new Servicio('Mudanza', 135, 'camion', 2500),
+    new Servicio('Transporte de animales', 600, 'camion y acoplado', 5000)
 ]
 
 function mostrarServicios() {
@@ -28,7 +27,7 @@ function pedirDatos() {
 
     if (servicioEncontrado) {
         alert(`El servicio de ${servicioEncontrado.tipo} tiene un costo de $${servicioEncontrado.precio}`)
-        } else {
+    } else {
         alert('No contamos con ese servicio, inténtelo nuevamente');
         mostrarServicios();
     }
@@ -36,4 +35,3 @@ function pedirDatos() {
 }
 
 mostrarServicios();
-
